@@ -10,7 +10,13 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from django.shortcuts import render
+from django.http import HttpResponse
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
 
 application = get_wsgi_application()
+
+
+def home(request):
+    return HttpResponse('<h1> Blog Home </h1>')
