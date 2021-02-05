@@ -10,3 +10,4 @@ class Profile(models.Model):
         return f'{self.user.username} Profile'
 
 
+
